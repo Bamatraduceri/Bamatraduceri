@@ -76,7 +76,8 @@
 
 	<link rel="stylesheet" href="css/style.css">
 
-
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
@@ -253,9 +254,50 @@
 						</ul>
 					</div>
 					<div class="col-md-6 fh5co-testimonial">
-						<img src="images/Harta.png" alt="Harta Lumii" class="img-responsive mb20">
-						<img src="Premii/Premii_sum.png" alt="Premii 2024" class="img-responsive">
-						<img src="images/Africa.png" alt="Limba Swahili" class="img-responsive">
+						
+					
+						<!-- Slider Swiper pentru prima și a treia imagine -->
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="images/Harta.png" alt="Harta Lumii" class="img-responsive">
+								</div>
+								<div class="swiper-slide">
+									<img src="images/Swahilii.png" alt="Limba Swahili" class="img-responsive">
+									
+								</div>
+								
+							</div>
+							<!-- Bulinele de navigare -->
+							<div class="swiper-pagination"></div>
+							<!-- Săgețile de navigare -->
+							
+						</div>
+						<script>
+							var swiper = new Swiper('.swiper-container', {
+                            slidesPerView: 1,
+								spaceBetween: 10,
+								loop: true, // Dezactivează loop dacă creează probleme
+								autoplay: {
+									delay: 3000,
+									disableOnInteraction: false,
+								},
+								pagination: {
+									el: '.swiper-pagination',
+									clickable: true,
+								},
+								navigation: {
+									nextEl: '.swiper-button-next',
+									prevEl: '.swiper-button-prev',
+								},
+								effect: 'slide', // Efect simplu de tranziție
+								speed: 2000 // Durata tranziției între slide-uri, în milisecunde
+								
+							});
+							
+						</script>
+						<!-- Imaginea statică (a doua) -->
+						<img src="Premii/Premi 2024.png" alt="Premii 2024" class="img-responsive mb20">
 					</div>
 				</div>
 			</div>
@@ -295,7 +337,7 @@
 
 	<!-- jQuery -->
 
-
+ 
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
 	<script src="js/jquery.easing.1.3.js"></script>

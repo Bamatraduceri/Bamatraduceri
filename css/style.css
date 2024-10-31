@@ -936,7 +936,7 @@ figure {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
   width: 30px;
   height: 2px;
   color: #fff;
@@ -1153,4 +1153,40 @@ figure {
   font-size: 20px;
   z-index: 1000;
   cursor: pointer;
+}
+
+.swiper-pagination-bullet {
+  background-color: blue;
+}
+
+
+.col-md-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.swiper-container {
+  width: 100%; /* Slider-ul ocupă întreaga lățime a containerului */
+  max-width: 600px; /* Setează o lățime maximă fixă */
+  height: auto;
+  overflow: hidden; /* Previne depășirea imaginilor */
+  margin: 0 auto;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ajustează imaginea la dimensiunea containerului */
+}
+@media (max-width: 768px) {
+  .swiper-container {
+      max-width: 100%; /* Pe ecrane mici, slider-ul ocupă întreaga lățime */
+  }
+}
+.fh5co-testimonial {
+  overflow: hidden;
+}
+.swiper-container {
+  position: relative;
 }
