@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -120,6 +119,9 @@
 				</div>
 			</header>
 			
+			<!-- Theme Toggle Button -->
+			<button class="theme-toggle" id="theme-toggle" title="Comută tema"></button>
+
 		</div>
 		
 		
@@ -143,15 +145,15 @@
 				<section id="desprenoi"></section>
 					<h1 class="handwritten">Despre Noi</h1>
         <h2 class="handwritten">Cine Suntem?</h2>
-        <p><strong>Bine ați venit la Ba-Ma</strong>, lideri în servicii de traducere profesională încă din 1993! Cu peste 30 de ani de experiență, oferim servicii de traducere de înaltă calitate în <strong>47 de limbi, atât europene, cât și asiatice</strong>. Misiunea noastră este să facilităm comunicarea globală și să sprijinim afacerile și persoanele în eforturile lor internaționale.</p>
+        <p><strong>Bine ați venit la Ba-Ma Traduceri Vâlcea</strong>, liderul serviciilor de traducere profesională în Râmnicu Vâlcea încă din 1993! Cu peste 30 de ani de experiență în domeniul traducerilor în județul Vâlcea, oferim servicii de traducere de înaltă calitate în <strong>47 de limbi, atât europene, cât și asiatice</strong>. Misiunea noastră este să fim cel mai de încredere birou de traduceri din Vâlcea, facilitând comunicarea globală pentru clienții noștri locali și naționali.</p>
 
-        <h2 class="handwritten">Echipa Noastra</h2>
-        <p><strong>Echipa noastră</strong> este formată din traducători autorizați și cu experiență, specializați în diverse domenii. Fiecare traducător este acreditat de <strong>Ministerul Justiției</strong>, asigurând astfel traduceri nu doar corecte, ci și recunoscute oficial.</p>
+        <h2 class="handwritten">Echipa Noastra din Vâlcea</h2>
+        <p><strong>Echipa noastră de traducători din Râmnicu Vâlcea</strong> este formată din profesioniști autorizați și cu experiență vastă, specializați în diverse domenii. Fiecare traducător este acreditat de <strong>Ministerul Justiției</strong>, asigurând astfel traduceri nu doar corecte, ci și recunoscute oficial în toată România.</p>
 
-        <h2 class="handwritten">Serviciile Noastre</h2>
+        <h2 class="handwritten">Serviciile Noastre de Traduceri</h2>
         <ul>
-            <li class="nbsp"><strong>Traduceri autorizate de Ministerul Justiției</strong>: Servicii de traducere recunoscute oficial pentru documente juridice și oficiale.</li>
-            <li class="nbsp"><strong>Traduceri acte tipizate</strong>: Traduceri precise pentru documente standardizate.</li>
+            <li class="nbsp"><strong>Traduceri autorizate în Vâlcea</strong>: Servicii complete de traducere recunoscute oficial pentru toate tipurile de documente.</li>
+            <li class="nbsp"><strong>Traduceri acte pentru Râmnicu Vâlcea</strong>: Traduceri rapide și precise pentru documente oficiale locale.</li>
             <li class="nbsp"><strong>Traduceri acte auto</strong>: Servicii rapide și corecte pentru documente auto.</li>
             <li class="nbsp"><strong>Traduceri medicale</strong>: Traduceri specializate pentru documente medicale, inclusiv cele cu limbaj tehnic și complex.</li>
             <li class="nbsp"><strong>Traduceri juridice</strong>: Traduceri detaliate și exacte pentru documente juridice.</li>
@@ -227,6 +229,44 @@
 
 	<!-- Main JS -->
 	<script src="js/main.js"></script>
+
+	<!-- WhatsApp Button -->
+	<a href="https://wa.me/40788245352" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+		<i class="icon-whatsapp"></i>
+	</a>
+
+	<!-- JavaScript -->
+	<script>
+		// Theme switcher
+		document.addEventListener('DOMContentLoaded', () => {
+			const themeToggle = document.getElementById('theme-toggle');
+			const themeIcon = themeToggle.querySelector('i');
+			
+			// Check for saved theme preference
+			const savedTheme = localStorage.getItem('theme') || 'dark';
+			document.documentElement.setAttribute('data-theme', savedTheme);
+			updateThemeIcon(savedTheme);
+			
+			// Toggle theme
+			themeToggle.addEventListener('click', () => {
+				const currentTheme = document.documentElement.getAttribute('data-theme');
+				const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+				
+				document.documentElement.setAttribute('data-theme', newTheme);
+				localStorage.setItem('theme', newTheme);
+				updateThemeIcon(newTheme);
+			});
+			
+			// Update icon based on theme
+			function updateThemeIcon(theme) {
+				if (theme === 'light') {
+					themeIcon.className = 'icon-moon-o';
+				} else {
+					themeIcon.className = 'icon-sun-o';
+				}
+			}
+		});
+	</script>
 
 	</body>
 </html>

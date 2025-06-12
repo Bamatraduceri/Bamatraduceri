@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -114,6 +113,9 @@
 									</ul>
 								</li>
 								<li class="active"><a href="contact.html">Contact</a></li>
+								<li>
+									<button class="theme-toggle" id="theme-toggle" title="Comută tema"></button>
+								</li>
 							</ul>
 						</nav>
 					</div>
@@ -127,11 +129,11 @@
 			<div class="fh5co-overlay"></div>
 			<div class="fh5co-cover text-center background-image" data-stellar-background-ratio="0.5">
 				<div class="desc animate-box">
-					<h2>Contactează-ne.</h2>
-					<span><a class="btn btn-primary btn-lg" href="#section1">Incepe</a></span>
+					<h2>Biroul de Traduceri Ba-Ma Vâlcea</h2>
+					<p class="text-white">Servicii de traduceri autorizate în Râmnicu Vâlcea</p>
+					<span><a class="btn btn-primary btn-lg" href="#section1">Contactează-ne</a></span>
 				</div>
 			</div>
-
 		</div>
 
 
@@ -140,13 +142,12 @@
 				<form action="#">
 					<div class="row">
 						<div class="col-md-6">
-							<h3 class="section-title" id="section1">Adresa Noastra</h3>
-							<p>În inima cartierului Ostroveni din Râmnicu Vâlcea, la poalele măreților Munți Carpați, există un loc unde cuvintele prind viață și limbile se împletesc într-o simfonie de sensuri. La biroul de traduceri 
-							   BA-MA, situat pe Strada Luceafărului, nr. 8, într-un spațiu primitor și elegant, magia traducerilor prinde formă. Aici, în mijlocul județului Vâlcea, oferim servicii de traduceri realizate cu pasiune și precizie, transformând barierele lingvistice în punți de comunicare.</p>
+							<h3 class="section-title" id="section1">Biroul Nostru din Râmnicu Vâlcea</h3>
+							<p>În inima cartierului Ostroveni din Râmnicu Vâlcea, la poalele măreților Munți Carpați, biroul nostru de traduceri BA-MA este punctul central pentru servicii profesionale de traduceri în județul Vâlcea. Situat pe Strada Luceafărului, nr. 8, într-un spațiu modern și primitor, oferim servicii complete de traduceri autorizate pentru toate limbile străine. Cu o experiență de peste 30 de ani în Vâlcea, suntem alegerea de încredere pentru traduceri precise și profesionale.</p>
 							<ul class="contact-info">
 								<li></li>
-								<li><i class="icon-location-pin"></i><a href="https://maps.app.goo.gl/ywMqTVjGqx3Dxr5A6">Str. Luceafarului Nr.8, Rm. Valcea, Valcea</a></li>
-								<li><a href="https://maps.app.goo.gl/oMQV1s4zscDQgQGN8">Calea lui Traian 138, Rm. Valcea, Valcea</a></li>
+								<li><i class="icon-location-pin"></i><a href="https://maps.app.goo.gl/ywMqTVjGqx3Dxr5A6">Str. Luceafărului Nr.8, Râmnicu Vâlcea, Vâlcea</a></li>
+								<li><a href="https://maps.app.goo.gl/oMQV1s4zscDQgQGN8">Calea lui Traian 138, Râmnicu Vâlcea, Vâlcea</a></li>
 								<li><i class="icon-phone2"></i><a href="tel: +40788245352">+40788245352</a> / <a href="tel:+40766297707">+40766297707</a></li>
 								<li><i class="icon-mail"></i><a href="mailto:bamatrada@gmail.com">bamatrada@gmail.com</a></li>
 							</ul>
@@ -284,6 +285,44 @@
 
 	<!-- Main JS -->
 	<script src="js/main.js"></script>
+
+	<!-- WhatsApp Button -->
+	<a href="https://wa.me/40788245352" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+		<i class="icon-whatsapp"></i>
+	</a>
+
+	<!-- JavaScript -->
+	<script>
+		// Theme switcher
+		document.addEventListener('DOMContentLoaded', () => {
+			const themeToggle = document.getElementById('theme-toggle');
+			const themeIcon = themeToggle.querySelector('i');
+			
+			// Check for saved theme preference
+			const savedTheme = localStorage.getItem('theme') || 'dark';
+			document.documentElement.setAttribute('data-theme', savedTheme);
+			updateThemeIcon(savedTheme);
+			
+			// Toggle theme
+			themeToggle.addEventListener('click', () => {
+				const currentTheme = document.documentElement.getAttribute('data-theme');
+				const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+				
+				document.documentElement.setAttribute('data-theme', newTheme);
+				localStorage.setItem('theme', newTheme);
+				updateThemeIcon(newTheme);
+			});
+			
+			// Update icon based on theme
+			function updateThemeIcon(theme) {
+				if (theme === 'light') {
+					themeIcon.className = 'icon-moon-o';
+				} else {
+					themeIcon.className = 'icon-sun-o';
+				}
+			}
+		});
+	</script>
 
 	</body>
 </html>
