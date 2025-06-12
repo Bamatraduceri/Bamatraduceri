@@ -27,7 +27,7 @@
     </header>
 
     <!-- Theme Toggle Button -->
-    <button class="theme-toggle" id="theme-toggle" title="Comută tema"></button>
+    <button class="theme-toggle" id="theme-toggle" title="Comută tema"><i></i></button>
 
     <div class="container">
         <article class="blog-post">
@@ -194,35 +194,7 @@
     <!-- Main JS -->
     <script src="../js/main.js"></script>
 
-    <script>
-        // Theme toggle functionality
-        const htmlElement = document.documentElement;
-        const themeToggle = document.getElementById('theme-toggle');
-        
-        // Check for saved theme preference, otherwise use device preference
-        const getPreferredTheme = () => {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                return savedTheme;
-            }
-            return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-        };
-        
-        // Set theme
-        const setTheme = (theme) => {
-            htmlElement.setAttribute('data-theme', theme);
-            localStorage.setItem('theme', theme);
-        };
-        
-        // Initialize theme
-        setTheme(getPreferredTheme());
-        
-        // Toggle theme
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = htmlElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            setTheme(newTheme);
-        });
-    </script>
+    <!-- Theme Switcher -->
+    <script src="../js/theme-switcher.js"></script>
 </body>
 </html> 

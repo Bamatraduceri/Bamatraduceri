@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="ro" data-theme="dark">
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -113,9 +110,6 @@
 									</ul>
 								</li>
 								<li class="active"><a href="contact.html">Contact</a></li>
-								<li>
-									<button class="theme-toggle" id="theme-toggle" title="Comută tema"></button>
-								</li>
 							</ul>
 						</nav>
 					</div>
@@ -123,6 +117,9 @@
 			</header>
 			
 		</div>
+
+		<!-- Theme Toggle Button -->
+		<button class="theme-toggle" id="theme-toggle" title="Comută tema"><i class="icon-sun-o"></i></button>
 		
 		
 		<div class="fh5co-hero">
@@ -286,43 +283,13 @@
 	<!-- Main JS -->
 	<script src="js/main.js"></script>
 
+	<!-- Theme Switcher -->
+	<script src="js/theme-switcher.js"></script>
+
 	<!-- WhatsApp Button -->
 	<a href="https://wa.me/40788245352" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
 		<i class="icon-whatsapp"></i>
 	</a>
-
-	<!-- JavaScript -->
-	<script>
-		// Theme switcher
-		document.addEventListener('DOMContentLoaded', () => {
-			const themeToggle = document.getElementById('theme-toggle');
-			const themeIcon = themeToggle.querySelector('i');
-			
-			// Check for saved theme preference
-			const savedTheme = localStorage.getItem('theme') || 'dark';
-			document.documentElement.setAttribute('data-theme', savedTheme);
-			updateThemeIcon(savedTheme);
-			
-			// Toggle theme
-			themeToggle.addEventListener('click', () => {
-				const currentTheme = document.documentElement.getAttribute('data-theme');
-				const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-				
-				document.documentElement.setAttribute('data-theme', newTheme);
-				localStorage.setItem('theme', newTheme);
-				updateThemeIcon(newTheme);
-			});
-			
-			// Update icon based on theme
-			function updateThemeIcon(theme) {
-				if (theme === 'light') {
-					themeIcon.className = 'icon-moon-o';
-				} else {
-					themeIcon.className = 'icon-sun-o';
-				}
-			}
-		});
-	</script>
 
 	</body>
 </html>
