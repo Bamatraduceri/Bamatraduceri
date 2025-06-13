@@ -631,7 +631,7 @@ figure {
 
 #fh5co-header-section {
   padding: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -675,14 +675,23 @@ figure {
 }
 
 #fh5co-menu-wrap {
-  position: relative;
+  position: fixed;
   z-index: 2;
   display: block;
-  float: right;
+  left: 65%;
+  transform: translateX(-50%);
+  float: none;
   margin-top: 15px;
+  right: auto;
 }
 #fh5co-menu-wrap .sf-menu a {
   padding: 1em .75em;
+}
+
+#fh5co-primary-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #fh5co-primary-menu > li > ul li.active > a {
@@ -2304,6 +2313,53 @@ figure {
     right: 15px !important;
     left: auto !important;
     bottom: 15px !important;
+  }
+}
+
+/* Back Arrow for Article Pages */
+.back-arrow {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 24px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] .back-arrow {
+  color: #000000;
+}
+
+.back-arrow:hover {
+  transform: translateX(-5px);
+  opacity: 0.8;
+}
+
+/* Hide hamburger menu on article pages */
+.article-page .fh5co-nav-toggle {
+  display: none !important;
+}
+
+/* Show back arrow on article pages */
+.article-page .back-arrow {
+  display: flex !important;
+}
+
+/* Mobile styles for back arrow */
+@media screen and (max-width: 768px) {
+  .back-arrow {
+    top: 15px;
+    left: 15px;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
   }
 }
 
