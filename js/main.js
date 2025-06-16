@@ -132,8 +132,15 @@
 		offcanvas();
 		mobileMenuOutsideClick();
 		contentWayPoint();
-		
 
+		// Navbar gradient shadow on scroll
+		$(window).on('scroll', function() {
+			if ($(window).scrollTop() > 10) {
+				$('.navbar-gradient-shadow').addClass('active');
+			} else {
+				$('.navbar-gradient-shadow').removeClass('active');
+			}
+		});
 	});
 
 
