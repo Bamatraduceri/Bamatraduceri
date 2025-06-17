@@ -24,6 +24,11 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+[data-theme="light"] [class^="icon-"], 
+[data-theme="light"] [class*=" icon-"] {
+    color: #000000 !important;
+}
+
 .icon-mobile:before {
     content: "\e000";
 }

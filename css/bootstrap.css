@@ -5180,7 +5180,7 @@ tbody.collapse.in {
   display: inline-block;
 }
 .breadcrumb > li + li:before {
-  content: "/ ";
+  content: "/ ";
   padding: 0 5px;
   color: #ccc;
 }
@@ -7320,4 +7320,9 @@ button.close {
   }
 }
 
-/*# sourceMappingURL=bootstrap.css.map */
+[data-theme="light"] input,
+[data-theme="light"] textarea,
+[data-theme="light"] select {
+  border: 1px solid #262626 !important;
+  color: #262626 !important;
+}

@@ -2246,12 +2246,13 @@ figure {
 }
 
 [data-theme="light"] .contact-info a {
-  color: #2D6CDF !important;
+  color:  rgba(0, 0, 0, 0.904) !important;
   text-decoration: none;
 }
 
 [data-theme="light"] .contact-info a:hover {
   text-decoration: underline;
+  color: #2D6CDF !important;
 }
 
 [data-theme="light"] #offcanvas-menu {
