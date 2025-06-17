@@ -129,32 +129,98 @@
 			<div class="fh5co-overlay"></div>
 			<div class="fh5co-cover text-center background-image" data-stellar-background-ratio="0.5">
 				<div class="desc animate-box">
-					<h2>Recenzii</h2>
-					<span><a class="btn btn-primary btn-lg" href="#recenzii">Incepe</a></span>
+					<h2 class="reviews-title">Recenziile Noastre Cele Mai Bune</h2>
+					<p class="reviews-subtitle">Descoperă ce spun clienții noștri despre serviciile noastre</p>
+					<span><a class="btn btn-primary btn-lg" href="#recenzii">Vezi Recenziile</a></span>
 				</div>
 			</div>
-
 		</div>
 
+		<style>
+			.reviews-title {
+				font-size: 3.5rem;
+				font-weight: 700;
+				color: #fff;
+				text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+				margin-bottom: 1rem;
+			}
+			
+			.reviews-subtitle {
+				font-size: 1.5rem;
+				color: #fff;
+				margin-bottom: 2rem;
+				text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+			}
 
-		<div>
+			@media (max-width: 768px) {
+				.reviews-title {
+					font-size: 2.5rem;
+				}
+				.reviews-subtitle {
+					font-size: 1.2rem;
+				}
+			}
+
+			@media (max-width: 480px) {
+				.reviews-title {
+					font-size: 2rem;
+				}
+				.reviews-subtitle {
+					font-size: 1rem;
+				}
+			}
+		</style>
+
+		
+		
+		<div style="margin-top: 8rem;">
 			<section id="recenzii"></section>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4 col-sm-4 fh5co-item-wrap">
-							<img src="Recenzii/Recenzia1-negru.png" alt="recenzia1" class="img-responsive">
+							<img src="Recenzii/Recenzia1-negru.png" alt="recenzia1" class="img-responsive review-img" data-light="Recenzii/Recenzia1-alb.png" data-dark="Recenzii/Recenzia1-negru.png">
 					</div>
 					<div class="col-md-4 col-sm-4 fh5co-item-wrap">
-						<img src="Recenzii/Recenzia2-negru.png" alt="recenzia2" class="img-responsive">
+						<img src="Recenzii/Recenzia2-negru.png" alt="recenzia2" class="img-responsive review-img" data-light="Recenzii/Recenzia2-alb.png" data-dark="Recenzii/Recenzia2-negru.png">
 				    </div>
 					<div class="col-md-4 col-sm-4 fh5co-item-wrap">
-						<img src="Recenzii/Recenzia3-negru.png" alt="recenzia3" class="img-responsive">
+						<img src="Recenzii/Recenzia3-negru.png" alt="recenzia3" class="img-responsive review-img" data-light="Recenzii/Recenzia3-alb.png" data-dark="Recenzii/Recenzia3-negru.png">
 				</div>
-				<span><a class="btn btn-primary btn-lg" href="https://www.google.com/maps/place/CENTRU+TRADUCERI+AUTORIZATE+BA-MA+SRL-+44+LIMBI/@45.0968479,24.3687994,17z/data=!4m18!1m9!3m8!1s0x474d38a107a27e61:0x8bdda30b2a227fb0!2sCENTRU+TRADUCERI+AUTORIZATE+BA-MA+SRL-+44+LIMBI!8m2!3d45.0968479!4d24.3713743!9m1!1b1!16s%2Fg%2F1hc3k004l!3m7!1s0x474d38a107a27e61:0x8bdda30b2a227fb0!8m2!3d45.0968479!4d24.3713743!9m1!1b1!16s%2Fg%2F1hc3k004l?entry=ttu">Scrie o recenzie</a></span>
+				<span><a style="margin-top: 4rem; margin-bottom: 4rem;" class="btn btn-primary btn-lg" href="https://www.google.com/maps/place/CENTRU+TRADUCERI+AUTORIZATE+BA-MA+SRL-+44+LIMBI/@45.0968479,24.3687994,17z/data=!4m18!1m9!3m8!1s0x474d38a107a27e61:0x8bdda30b2a227fb0!2sCENTRU+TRADUCERI+AUTORIZATE+BA-MA+SRL-+44+LIMBI!8m2!3d45.0968479!4d24.3713743!9m1!1b1!16s%2Fg%2F1hc3k004l!3m7!1s0x474d38a107a27e61:0x8bdda30b2a227fb0!8m2!3d45.0968479!4d24.3713743!9m1!1b1!16s%2Fg%2F1hc3k004l?entry=ttu">Scrie o recenzie</a></span>
 				</div>
 			</div>
 		</div>
 
+		<script>
+			// Function to update review images based on theme
+			function updateReviewImages() {
+				const isDarkTheme = document.documentElement.getAttribute('data-theme') === 'dark';
+				const reviewImages = document.querySelectorAll('.review-img');
+				reviewImages.forEach(img => {
+					img.src = isDarkTheme ? img.dataset.dark : img.dataset.light;
+				});
+			}
+
+			// Listen for theme changes
+			document.addEventListener('DOMContentLoaded', function() {
+				// Initial update
+				updateReviewImages();
+
+				// Listen for theme changes
+				const observer = new MutationObserver(function(mutations) {
+					mutations.forEach(function(mutation) {
+						if (mutation.attributeName === 'data-theme') {
+							updateReviewImages();
+						}
+					});
+				});
+
+				observer.observe(document.documentElement, {
+					attributes: true,
+					attributeFilter: ['data-theme']
+				});
+			});
+		</script>
 
 		
 		
