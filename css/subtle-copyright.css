@@ -1,0 +1,128 @@
+/* Subtle Copyright Protection - Ba-Ma Traduceri Autorizate */
+/* © 2024 Ba-Ma Traduceri Autorizate. All rights reserved. */
+
+/* Subtle Watermark */
+.subtle-watermark {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.01);
+    pointer-events: none;
+    z-index: 9998;
+    user-select: none;
+    white-space: nowrap;
+    font-family: 'Times New Roman', serif;
+    font-weight: normal;
+    text-shadow: none;
+    opacity: 0.3;
+}
+
+.subtle-watermark::before {
+    content: "Ba-Ma Traduceri Autorizate © 2024";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Invisible Copyright Text */
+.invisible-copyright {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    color: transparent;
+    font-size: 1px;
+}
+
+.invisible-copyright::before {
+    content: "© 2024 Ba-Ma Traduceri Autorizate. Toate drepturile rezervate.";
+}
+
+/* Subtle Background Pattern */
+.copyright-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 2px,
+            rgba(255, 255, 255, 0.001) 2px,
+            rgba(255, 255, 255, 0.001) 4px
+        );
+    pointer-events: none;
+    z-index: 9997;
+}
+
+/* Hidden Copyright in CSS Comments */
+/* 
+   Copyright Notice:
+   © 2024 Ba-Ma Traduceri Autorizate
+   All rights reserved.
+   This content is protected by copyright law.
+   Unauthorized copying or distribution is prohibited.
+*/
+
+/* Subtle Text Protection */
+.text-protection {
+    position: relative;
+}
+
+.text-protection::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Responsive Subtle Protection */
+@media (max-width: 768px) {
+    .subtle-watermark {
+        font-size: 14px;
+        opacity: 0.2;
+    }
+}
+
+@media (max-width: 480px) {
+    .subtle-watermark {
+        font-size: 12px;
+        opacity: 0.15;
+    }
+}
+
+/* Print Protection */
+@media print {
+    .subtle-watermark,
+    .copyright-pattern,
+    .invisible-copyright {
+        display: none !important;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .subtle-watermark {
+        opacity: 0.1;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .copyright-pattern {
+        background-image: none;
+    }
+} 

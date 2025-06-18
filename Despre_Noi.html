@@ -75,9 +75,15 @@
 
 	<link rel="stylesheet" href="css/style.css">
 
+	<!-- Security Protection CSS -->
+	<link rel="stylesheet" href="css/security-protection.css">
+	<!-- Subtle Copyright Protection -->
+	<link rel="stylesheet" href="css/subtle-copyright.css">
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- Security System JS -->
+	<script src="js/security-system.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -119,6 +125,8 @@
 				</div>
 			</header>
 			<div class="navbar-gradient-shadow"></div>
+			<!-- Cookies/Policies Button -->
+			<button class="cookies-toggle" id="cookies-toggle" title="Politici și Cookies">🍪</button>
 			<!-- Theme Toggle Button -->
 			<button class="theme-toggle" id="theme-toggle" title="Comută tema"></button>
 
@@ -201,6 +209,14 @@
 					</p>
 				</div>
 				</div>
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<hr style="border-color: #ddd; margin: 20px 0;">
+						<p style="font-size: 12px; color: #666; margin-bottom: 10px;">
+							© 1993-2024 Ba-Ma Traduceri Autorizate. Toate drepturile rezervate.
+						</p>
+					</div>
+				</div>
 			</div>
 		</footer>
 	
@@ -233,11 +249,43 @@
 	<!-- Theme Switcher -->
 	<script src="js/theme-switcher.js"></script>
 
+	<!-- Cookies functionality -->
+	<script src="js/cookies.js"></script>
+
 	<!-- WhatsApp Button -->
 	<a href="https://wa.me/40788245352" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
 		<i class="icon-whatsapp"></i>
 	</a>
+	<!-- Cookies/Policies Modal -->
+	<div id="cookies-modal" class="cookies-modal" style="display:none;">
+		<div class="cookies-modal-content">
+			<span class="cookies-close" id="cookies-close">&times;</span>
+			<h3>Politica de Cookies</h3>
+			<p>Folosim cookies pentru a îmbunătăți experiența pe site. Navigând în continuare, ești de acord cu
+				utilizarea acestora.</p>
+			<a href="cookies.html" target="_blank">Vezi Politica de Cookies</a>
+			<hr>
+			<h3>Politica de Confidențialitate</h3>
+			<p>Datele tale sunt protejate conform legislației în vigoare.</p>
+			<a href="politica-confidentialitate.html" target="_blank">Vezi Politica de Confidențialitate</a>
+		</div>
+	</div>
 
+	<!-- Cookie Consent Banner -->
+	<div id="cookie-banner" class="cookie-banner">
+		<div class="cookie-banner-content">
+			<div class="cookie-text">
+				<h4>🍪 Folosim cookies</h4>
+				<p>Acest site folosește cookies pentru a îmbunătăți experiența ta. Prin continuarea navigării, ești de
+					acord cu utilizarea acestora.</p>
+			</div>
+			<div class="cookie-buttons">
+				<button id="accept-all" class="cookie-btn accept-btn">Accept toate</button>
+				<button id="accept-necessary" class="cookie-btn necessary-btn">Doar necesare</button>
+				<button id="deny-cookies" class="cookie-btn deny-btn">Refuz</button>
+			</div>
+		</div>
+	</div>
 	</body>
 </html>
 

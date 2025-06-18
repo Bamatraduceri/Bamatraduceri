@@ -2152,6 +2152,15 @@ figure {
 
 [data-theme="light"] .whatsapp-button {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  color: white !important;
+}
+
+[data-theme="light"] .whatsapp-button:hover {
+  color: white !important;
+}
+
+[data-theme="light"] .whatsapp-button i {
+  color: white !important;
 }
 
 [data-theme="light"] .fh5co-news ul li a {
@@ -2593,4 +2602,462 @@ figure {
 [data-theme="light"] #fh5co-primary-menu li a[href="../index.html#noutati"] {
   color: #000 !important;
 }
+
+/* Cookies/Policies Modal */
+.cookies-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.cookies-modal-content {
+  background: #2a2a2a;
+  margin: 10% auto;
+  padding: 30px 20px 20px 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Light theme pentru cookies modal */
+[data-theme="light"] .cookies-modal-content {
+  background: #ffffff;
+  color: #333333;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.cookies-modal-content h3 {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+[data-theme="light"] .cookies-modal-content h3 {
+  color: #333333;
+}
+
+.cookies-modal-content p {
+  color: #cccccc;
+  margin-bottom: 15px;
+}
+
+[data-theme="light"] .cookies-modal-content p {
+  color: #666666;
+}
+
+.cookies-modal-content a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+[data-theme="light"] .cookies-modal-content a {
+  color: #000000;
+}
+
+.cookies-modal-content a:hover {
+  color: #cccccc;
+  text-decoration: underline;
+}
+
+[data-theme="light"] .cookies-modal-content a:hover {
+  color: #333333;
+  text-decoration: underline;
+}
+
+.cookies-close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.cookies-close:hover {
+  color: #333;
+}
+
+[data-theme="light"] .cookies-close {
+  color: #666;
+}
+
+[data-theme="light"] .cookies-close:hover {
+  color: #000;
+}
+
+@media (max-width: 600px) {
+  .cookies-modal-content {
+    width: 90vw;
+    margin: 30% auto;
+    padding: 20px 5vw 15px 5vw;
+  }
+}
+
+/* Cookie Consent Banner - Dark Theme */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #1a1a1a;
+  color: #ffffff;
+  z-index: 10001;
+  box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.3);
+  border-top: 1px solid #333;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Light theme pentru cookie banner */
+[data-theme="light"] .cookie-banner {
+  background: #ffffff;
+  color: #333333;
+  box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #e0e0e0;
+}
+
+.cookie-banner.show {
+  transform: translateY(0);
+}
+
+.cookie-banner-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.cookie-text {
+  flex: 1;
+}
+
+.cookie-text h4 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Light theme pentru text */
+[data-theme="light"] .cookie-text h4 {
+  color: #333333;
+}
+
+.cookie-text p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #cccccc;
+}
+
+/* Light theme pentru paragraf */
+[data-theme="light"] .cookie-text p {
+  color: #666666;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.cookie-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.accept-btn {
+  background: #4CAF50;
+  color: white;
+}
+
+.accept-btn:hover {
+  background: #45a049;
+  transform: translateY(-1px);
+}
+
+.necessary-btn {
+  background: #2196F3;
+  color: white;
+}
+
+.necessary-btn:hover {
+  background: #1976D2;
+  transform: translateY(-1px);
+}
+
+.deny-btn {
+  background: #f44336;
+  color: white;
+}
+
+.deny-btn:hover {
+  background: #d32f2f;
+  transform: translateY(-1px);
+}
+
+/* Responsive design pentru cookie banner */
+@media (max-width: 768px) {
+  .cookie-banner-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .cookie-text h4 {
+    font-size: 16px;
+  }
+  
+  .cookie-text p {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+  
+  .cookie-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+  
+  .cookie-btn {
+    width: 100%;
+    padding: 12px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cookie-banner-content {
+    padding: 12px;
+  }
+  
+  .cookie-text h4 {
+    font-size: 15px;
+  }
+  
+  .cookie-text p {
+    font-size: 12px;
+  }
+  
+  .cookie-btn {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+}
+
+/* Stiluri pentru paginile de politici - Dark Theme */
+.policy-page {
+  background: #1a1a1a;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.policy-page .cookies-modal-content {
+  background: #2a2a2a;
+  color: #ffffff;
+  margin: 40px auto;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.policy-page .cookies-modal-content h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.policy-page .cookies-modal-content h3 {
+  color: #ffffff;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.policy-page .cookies-modal-content p {
+  color: #cccccc;
+  margin-bottom: 15px;
+}
+
+.policy-page .cookies-modal-content ul {
+  color: #cccccc;
+}
+
+.policy-page .cookies-modal-content li {
+  margin-bottom: 8px;
+}
+
+.policy-page .cookies-modal-content a {
+  color: #d2e0d3;
+  text-decoration: none;
+}
+
+.policy-page .cookies-modal-content a:hover {
+  color: #717271;
+  text-decoration: underline;
+}
+
+.policy-page .back-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #494949;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.policy-page .back-link:hover {
+  background: #494949;
+}
+
+/* Light theme pentru paginile de politici */
+[data-theme="light"] .policy-page {
+  background: #ffffff;
+  color: #333333;
+}
+
+[data-theme="light"] .policy-page .cookies-modal-content {
+  background: #f8f9fa;
+  color: #333333;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+[data-theme="light"] .policy-page .cookies-modal-content h2 {
+  color: #333333;
+}
+
+[data-theme="light"] .policy-page .cookies-modal-content h3 {
+  color: #333333;
+}
+
+[data-theme="light"] .policy-page .cookies-modal-content p {
+  color: #666666;
+}
+
+[data-theme="light"] .policy-page .cookies-modal-content ul {
+  color: #666666;
+}
+
+[data-theme="light"] .policy-page .cookies-modal-content a {
+  color: #000000;
+}
+
+[data-theme="light"] .policy-page .cookies-modal-content a:hover {
+  color: #000000;
+}
+
+[data-theme="light"] .policy-page .back-link {
+  background: #ffffff;
+  color: white;
+}
+
+[data-theme="light"] .policy-page .back-link:hover {
+  background: #ffffff;
+}
+
+/* Responsive design pentru cookie banner */
+@media (max-width: 768px) {
+  .cookie-banner-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .cookie-text h4 {
+    font-size: 16px;
+  }
+  
+  .cookie-text p {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+  
+  .cookie-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+  
+  .cookie-btn {
+    width: 100%;
+    padding: 12px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cookie-banner-content {
+    padding: 12px;
+  }
+  
+  .cookie-text h4 {
+    font-size: 15px;
+  }
+  
+  .cookie-text p {
+    font-size: 12px;
+  }
+  
+  .cookie-btn {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+}
+
+/* Cookies toggle button */
+.cookies-toggle {
+  position: fixed;
+  bottom: 80px;
+  left: 20px;
+  background: none;
+  border: none;
+  color: var(--toggle-color);
+  cursor: pointer;
+  padding: 15px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.cookies-toggle:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
 

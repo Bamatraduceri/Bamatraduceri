@@ -1,0 +1,30 @@
+# Robots.txt pentru Ba-Ma Traduceri Autorizate
+# © 2024 Ba-Ma Traduceri Autorizate. Toate drepturile rezervate.
+
+User-agent: *
+Allow: /
+
+# Protejează conținutul sensibil
+Disallow: /js/
+Disallow: /css/
+Disallow: /sass/
+Disallow: /fonts/
+Disallow: /.git/
+Disallow: /.github/
+
+# Permite accesul la imagini publice
+Allow: /images/
+Allow: /Flags/
+Allow: /Poze/
+Allow: /Premii/
+
+# Sitemap
+Sitemap: https://bama-traduceri-valcea.ro/sitemap.xml
+
+# Crawl-delay pentru a reduce încărcarea serverului
+Crawl-delay: 1
+
+# Comentarii pentru protecția conținutului
+# Acest site este protejat de drepturile de autor
+# © 1993-2024 Ba-Ma Traduceri Autorizate
+# Orice reproducere neautorizată este interzisă 
