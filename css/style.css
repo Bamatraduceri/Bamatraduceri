@@ -595,9 +595,9 @@ figure {
 
 .sf-menu ul {
   box-shadow: none;
-  border: transparent;
+  border: none;
   min-width: 10em;
-  *width: 10em;
+  width: 10em;
 }
 
 .sf-menu a {
@@ -658,7 +658,7 @@ figure {
 
 .sf-arrows .sf-with-ul {
   padding-right: 2.5em;
-  *padding-right: 1em;
+  padding-right: 1em;
 }
 
 .sf-arrows .sf-with-ul:after {
@@ -719,10 +719,28 @@ figure {
   font-weight: 200;
   margin-left: -75px;
   float: left;
+  
 }
 
 #fh5co-logo span {
   font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  #fh5co-logo {
+    width: 100%;
+    float: none;
+    text-align: center;
+    font-size: 32px;
+    margin-left: 0;
+    /* margin-top: 10px; */
+    padding-top: 8px;
+  }
+  #fh5co-logo img {
+    height: 110px !important;
+    /* margin: 0 auto; */
+    display: block;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -3058,6 +3076,15 @@ figure {
   opacity: 0.8;
   transform: scale(1.1);
   transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+  .cookies-toggle {
+    bottom: 70px;
+    left: 13px;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
 }
 
 
