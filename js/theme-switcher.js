@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (savedTheme) {
             return savedTheme;
         }
-        return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        // Default: light theme
+        return 'light';
     };
     
     // Set theme and update icon
