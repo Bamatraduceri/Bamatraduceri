@@ -2808,12 +2808,12 @@ figure {
 }
 
 .accept-btn {
-  background: #4CAF50;
+  background: #007a1f !important;
   color: white;
 }
 
 .accept-btn:hover {
-  background: #45a049;
+  background: #005a16 !important;
   transform: translateY(-1px);
 }
 
