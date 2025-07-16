@@ -2811,10 +2811,10 @@ figure {
   background: #007a1f !important;
   color: #fff !important;
   border: none !important;
-  box-shadow: none !important;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #007a1f;
 }
 .accept-btn:focus {
-  outline: 2px solid #fff !important; /* doar pentru accesibilitate la focus */
+  outline: 2px solid #fff !important;
   outline-offset: 2px;
 }
 
