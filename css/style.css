@@ -2808,7 +2808,7 @@ figure {
 }
 
 .accept-btn {
-  background: #000 !important;
+  background: #0050b3 !important;   /* albastru închis, contrast excelent */
   color: #fff !important;
   border: none !important;
   box-shadow: none !important;
@@ -2820,7 +2820,7 @@ figure {
 }
 
 .accept-btn:hover {
-  background: #222 !important;
+  background: #003a75 !important;   /* albastru și mai închis la hover */
 }
 
 .accept-btn:focus {
