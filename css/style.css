@@ -1439,8 +1439,31 @@ figure {
   cursor: pointer;
 }
 
+.swiper-pagination {
+  position: absolute;
+  bottom: -30px !important;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+  display: block !important;
+}
 .swiper-pagination-bullet {
-  background-color: blue;
+  width: 20px !important;
+  height: 20px !important;
+  margin: 0 6px !important;
+  background: #f50000 !important;
+  border: 2px solid #f50000 !important;
+  opacity: 1 !important;
+  display: inline-block !important;
+  box-shadow: 0 0 6px 2px #f50000;
+  transition: background 0.2s, border 0.2s;
+}
+.swiper-pagination-bullet-active {
+  background: #f50000 !important;
+  border: 2px solid #f50000 !important;
+  /* box-shadow: 0 0 10px 3px #ff9800; */
 }
 
 
@@ -1452,14 +1475,11 @@ figure {
 
 .swiper-container {
   width: 100%;
-  /* Slider-ul ocupă întreaga lățime a containerului */
   max-width: 600px;
-  /* Setează o lățime maximă fixă */
   height: auto;
   overflow: hidden;
-  /* Previne depășirea imaginilor */
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   position: relative;
 }
 
@@ -1478,32 +1498,40 @@ figure {
 }
 
 .fh5co-testimonial {
-  margin-top: 80px;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+.fh5co-testimonial img.img-responsive {
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
 .swiper-pagination {
   position: absolute;
-  bottom: 10px !important;
   left: 0;
   right: 0;
+  bottom: 10px !important;
   z-index: 10;
+  width: 100%;
+  text-align: center;
+  display: block !important;
+  margin-bottom: 0;
 }
 
 .swiper-pagination-bullet {
-  background: rgba(255, 255, 255, 0.8);
-  opacity: 0.5;
+  width: 14px !important;
+  height: 14px !important;
+  margin: 10px 3px !important;
+  /* background: #264E86 !important; */
+  opacity: 0.7 !important;
+  display: inline-block !important;
 }
-
 .swiper-pagination-bullet-active {
-  opacity: 1;
-  background: #fff;
-}
-
-.fh5co-testimonial img.img-responsive {
-  margin-bottom: 30px;
+  opacity: 1 !important;
+  background: #f50000 !important;
 }
 
 /* Article List Styles */
@@ -2808,8 +2836,6 @@ figure {
 }
 
 .accept-btn {
-  background: #ffe066 !important;   /* galben deschis, contrast excelent */
-  color: #111 !important;           /* negru foarte închis */
   border: none !important;
   box-shadow: none !important;
   padding: 0.5em 1em;
@@ -2820,7 +2846,7 @@ figure {
 }
 
 .accept-btn:hover {
-  background: #ffd700 !important;   /* galben mai intens la hover */
+  transform: translateY(-1px);
 }
 
 .accept-btn:focus {
@@ -2834,7 +2860,10 @@ figure {
 }
 
 .deny-btn:hover {
-  background: #d32f2f;
+  transform: translateY(-1px);
+}
+
+.necessary-btn:hover {
   transform: translateY(-1px);
 }
 
@@ -3098,7 +3127,7 @@ figure {
   background: #ffe066 !important;
 }
 .cookie-btn, .accept-btn, .deny-btn, .necessary-btn {
-  color: #fff !important;
+  color: #111 !important;
   font-weight: bold;
   font-size: 1.1em;
   border-radius: 6px;
@@ -3106,21 +3135,10 @@ figure {
   min-height: 44px;
   margin: 6px 8px;
 }
-.accept-btn { background: #28a745 !important; }
-.deny-btn { background: #dc3545 !important; }
-.necessary-btn { background: #6c757d !important; }
+.accept-btn { background: #56e80d !important; }
+.deny-btn { background: #f8041c !important; }
+.necessary-btn { background: #02b3ff !important; }
 
-/* Swiper bullets mai mari și mai spațiate */
-.swiper-pagination-bullet {
-  width: 28px !important;
-  height: 28px !important;
-  margin: 0 8px !important;
-  background: #264E86 !important;
-  opacity: 0.7 !important;
-}
-.swiper-pagination-bullet-active {
-  opacity: 1 !important;
-  background: #111 !important;
-}
+
 
 
