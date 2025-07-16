@@ -280,7 +280,7 @@ figure {
 
 @media screen and (max-width: 768px) {
   .fh5co-cover {
-    heifght: inherit;
+    height: inherit;
     padding: 3em 0;
   }
 }
@@ -297,7 +297,7 @@ figure {
 
 @media screen and (max-width: 768px) {
   .fh5co-cover.fh5co-cover_2 {
-    heifght: inherit;
+    height: inherit;
     padding: 3em 0;
   }
 }
@@ -3085,6 +3085,41 @@ figure {
     height: 50px;
     font-size: 24px;
   }
+}
+
+/* Contrast și accesibilitate îmbunătățite */
+.fh5co-date {
+  color: #111 !important;
+  background: #ffe066 !important;
+}
+[data-theme="light"] .fh5co-date {
+  color: #111 !important;
+  background: #ffe066 !important;
+}
+.cookie-btn, .accept-btn, .deny-btn, .necessary-btn {
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 1.1em;
+  border-radius: 6px;
+  min-width: 120px;
+  min-height: 44px;
+  margin: 6px 8px;
+}
+.accept-btn { background: #28a745 !important; }
+.deny-btn { background: #dc3545 !important; }
+.necessary-btn { background: #6c757d !important; }
+
+/* Swiper bullets mai mari și mai spațiate */
+.swiper-pagination-bullet {
+  width: 28px !important;
+  height: 28px !important;
+  margin: 0 8px !important;
+  background: #264E86 !important;
+  opacity: 0.7 !important;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  background: #111 !important;
 }
 
 
