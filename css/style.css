@@ -2808,8 +2808,8 @@ figure {
 }
 
 .accept-btn {
-  background: #0050b3 !important;   /* albastru închis, contrast excelent */
-  color: #fff !important;
+  background: #ffe066 !important;   /* galben deschis, contrast excelent */
+  color: #111 !important;           /* negru foarte închis */
   border: none !important;
   box-shadow: none !important;
   padding: 0.5em 1em;
@@ -2820,11 +2820,11 @@ figure {
 }
 
 .accept-btn:hover {
-  background: #003a75 !important;   /* albastru și mai închis la hover */
+  background: #ffd700 !important;   /* galben mai intens la hover */
 }
 
 .accept-btn:focus {
-  outline: 2px solid #fff !important;
+  outline: 2px solid #111 !important;
   outline-offset: 2px;
 }
 
