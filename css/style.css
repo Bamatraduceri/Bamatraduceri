@@ -2808,10 +2808,10 @@ figure {
 }
 
 .accept-btn {
-  background-color: #005510 !important; /* verde mai închis */
-  color: #ffffff !important; /* alb */
+  background: #000 !important;
+  color: #fff !important;
   border: none !important;
-  box-shadow: none !important; /* eliminat complet */
+  box-shadow: none !important;
   padding: 0.5em 1em;
   font-weight: 600;
   cursor: pointer;
@@ -2820,12 +2820,12 @@ figure {
 }
 
 .accept-btn:hover {
-  background-color: #007a1f !important; /* verde original la hover */
+  background: #222 !important;
 }
 
 .accept-btn:focus {
-  outline: 3px solid #ffff00 !important; /* galben pentru vizibilitate */
-  outline-offset: 3px;
+  outline: 2px solid #fff !important;
+  outline-offset: 2px;
 }
 
 .deny-btn {
