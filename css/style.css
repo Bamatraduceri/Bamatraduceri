@@ -2808,21 +2808,23 @@ figure {
 }
 
 .accept-btn {
-  background-color: #007a1f !important; /* verde */
+  background-color: #005510 !important; /* verde mai închis */
   color: #ffffff !important; /* alb */
   border: none !important;
-  box-shadow: none !important; /* elimină box-shadow-ul */
+  box-shadow: none !important; /* eliminat complet */
   padding: 0.5em 1em;
   font-weight: 600;
   cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 .accept-btn:hover {
-  background-color: #005e16 !important; /* verde mai închis la hover */
+  background-color: #007a1f !important; /* verde original la hover */
 }
 
 .accept-btn:focus {
-  outline: 3px solid #ffff00 !important; /* galben deschis pentru contrast bun */
+  outline: 3px solid #ffff00 !important; /* galben pentru vizibilitate */
   outline-offset: 3px;
 }
 
