@@ -2809,22 +2809,13 @@ figure {
 
 .accept-btn {
   background: #007a1f !important;
-  color: white;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #007a1f;
 }
-
-.accept-btn:hover {
-  background: #005a16 !important;
-  transform: translateY(-1px);
-}
-
-.necessary-btn {
-  background: #2196F3;
-  color: white;
-}
-
-.necessary-btn:hover {
-  background: #1976D2;
-  transform: translateY(-1px);
+.accept-btn:focus {
+  outline: 2px solid #fff !important;
+  outline-offset: 2px;
 }
 
 .deny-btn {
